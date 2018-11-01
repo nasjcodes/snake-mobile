@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="src" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="wormgame.Main" />
+    <module name="src" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

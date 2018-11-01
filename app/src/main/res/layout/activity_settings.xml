@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Settings">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty"
+        android:textSize="@dimen/button_text_size" />
+
+    <Spinner
+        android:id="@+id/difficulty_spinner"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/snake_color"-->
+    <!--android:textSize="@dimen/button_text_size"/>-->
+    <!---->
+    <!--<Spinner-->
+    <!--android:id="@+id/snake_color_spinner"-->
+    <!--android:layout_width="@dimen/button_width"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/apple_color"-->
+    <!--android:textSize="@dimen/button_text_size"/>-->
+    <!---->
+    <!--<Spinner-->
+    <!--android:id="@+id/apple_color_spinner"-->
+    <!--android:layout_width="@dimen/button_width"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="20dp" />-->
+
+
+    <Button
+        android:id="@+id/defaults"
+        android:layout_width="@dimen/button_width_small"
+        android:layout_height="wrap_content"
+        android:text="@string/default_button"
+        android:textSize="@dimen/button_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="@dimen/button_width_small"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/back_button"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="@dimen/button_width_small"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/save_button"
+            android:textSize="@dimen/button_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

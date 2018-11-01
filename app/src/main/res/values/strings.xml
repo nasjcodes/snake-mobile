@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Snake Mobile</string>
+    <string name="start_button">Start</string>
+    <string name="settings_button">Settings</string>
+    <string name="back_button">Back</string>
+    <string name="save_button">Save</string>
+    <string name="default_button">Defaults</string>
+    <string name="developer">nasjcodes</string>
+
+    <string name="difficulty">Difficulty</string>
+    <string-array name="difficulty">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+    </string-array>
+
+    <string name="snake_color">"Snake Color"</string>
+    <string name="apple_color">"Apple Color"</string>
+
+    <string name="game_over">"Game Over!"</string>
+    <string name="restart_button">Restart</string>
+
+</resources>
