@@ -15,7 +15,7 @@ There were 2 main differences to porting the code in terms of functionality:
 * Android uses [Canvases](https://developer.android.com/reference/android/graphics/Canvas) to draw graphics, and I had no experience since Java uses [JPanel](https://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html). I followed [this](https://google-developer-training.gitbooks.io/android-developer-advanced-course-practicals/content/unit-5-advanced-graphics-and-views/lesson-11-canvas/11-1a-p-create-a-simple-canvas/11-1a-p-create-a-simple-canvas.html) tutorial to make it work. Additionally, I refactored it into a separate class for (hopefully) cleaner code.
 
 ### Other challenges
-* I wanted to add a settings page so that the application would not be too simple. The current iteration has a difficulty spinner which limits the maximum speed of the snake.
+* I wanted to add a settings page so that the application would not be too simple. The current iteration has a difficulty spinner which limits the maximum speed of the snake. Additionally, settings are saved using SharedPreferences.
 * This application has 3 Activities and 1 Fragment. I tried to keep good programming practice by storing all strings in strings.xml. Additionally, most dimensions are astored in dimens.xml.
 * I could not find a way to simply set the text size of the spinner using layouts. I found a workaround to programatically generate the spinner with a larger size.
 
