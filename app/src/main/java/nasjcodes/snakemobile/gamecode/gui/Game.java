@@ -4,9 +4,11 @@ import android.os.Handler;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 import nasjcodes.snakemobile.R;
 import nasjcodes.snakemobile.gamecode.Direction;
@@ -67,7 +69,18 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         setPreferences();
 
         //Initialize game view and board
-        ImageView gameView = (ImageView) findViewById(R.id.gameView);
+        SquareImageView gameView = (SquareImageView) findViewById(R.id.gameView);
+
+        //Add all views except the gameView itself
+        ViewGroup allViews = (ViewGroup) findViewById(R.id.game);
+        for(int i = 0; i < allViews.getChildCount(); i++) {
+
+            if(allViews.getChildAt(i).getId() != gameView.getId()) {
+                gameView.addView(allViews.getChildAt(i));
+            }
+
+        }
+
         gameBoard = new GameBoard(game, gameView);
 
         //Start Runnable 500ms after activity is created
@@ -132,15 +145,20 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         //Get and set preferences
         preferences = new Preferences(this);
 
-        //Set speed cap based on difficulty
+        //Set speed cap based on difficulty and show on screen
+        TextView view = findViewById(R.id.difficultyText);
+        String[] difficulty = getResources().getStringArray(R.array.difficulty);
         switch(preferences.getDifficulty()) {
             case 0:
+                view.setText(difficulty[0]);
                 speedCap = 4;
                 break;
             case 1:
+                view.setText(difficulty[1]);
                 speedCap = 8;
                 break;
             case 2:
+                view.setText(difficulty[2]);
                 speedCap = 12;
                 break;
         }

@@ -15,9 +15,13 @@ There were 2 main differences to porting the code in terms of functionality:
 * Android uses [Canvases](https://developer.android.com/reference/android/graphics/Canvas) to draw graphics, and I had no experience since Java uses [JPanel](https://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html). I followed [this](https://google-developer-training.gitbooks.io/android-developer-advanced-course-practicals/content/unit-5-advanced-graphics-and-views/lesson-11-canvas/11-1a-p-create-a-simple-canvas/11-1a-p-create-a-simple-canvas.html) tutorial to make it work. Additionally, I refactored it into a separate class for (hopefully) cleaner code.
 
 ### Other challenges
+#### First commit (1 Nov 2018)
 * I wanted to add a settings page so that the application would not be too simple. The current iteration has a difficulty spinner which limits the maximum speed of the snake. Additionally, settings are saved using SharedPreferences.
 * This application has 3 Activities and 1 Fragment. I tried to keep good programming practice by storing all strings in strings.xml. Additionally, most dimensions are astored in dimens.xml.
 * I could not find a way to simply set the text size of the spinner using layouts. I found a workaround to programatically generate the spinner with a larger size.
+
+#### Second commit (2 Nov 2018)
+* I create a new subclass of ImageView (SquareImageView) to programatically determine the side length of the game and generate a square view. This was done by overriding the onMeasure method, and subtracting the heights of the other views. I tried to keep good coding practice so that if additional views are added, the code should not change much.
 
 ## TO-DO
 ### Issues
@@ -26,7 +30,6 @@ There were 2 main differences to porting the code in terms of functionality:
 
 ### Things to improve
 * More settings such as snake/apple/background colours.
-* The game screen could be better fit to the edges of the screen.
 * The directional keys could be changed to arrow icons.
 * Animations can be more consistent throughout the application.
 * Adding a "Back" and "Reset" button on the game screen.

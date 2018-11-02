@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import nasjcodes.snakemobile.gamecode.domain.Piece;
 import nasjcodes.snakemobile.gamecode.game.SnakeGame;
 
+//This class uses Canvas to draw the game board and updates the given gameView
 class GameBoard {
     private SnakeGame game;
     private ImageView gameView;
@@ -53,13 +54,21 @@ class GameBoard {
     }
 
     private void doFirstUpdate() {
-        int vWidth = gameView.getWidth();
-        int vHeight = gameView.getHeight();
-        this.pieceLength = vWidth / 20;
+        int sideLength;
+
+        //Get smaller of the two (width/height) to generate a square play area
+        //Equate the canvas size to the view size to prevent any scaling artifacts
+        if(gameView.getWidth() < gameView.getHeight()) {
+            sideLength = gameView.getWidth();
+        } else {
+            sideLength = gameView.getHeight();
+        }
+
+        this.pieceLength = sideLength / 20;
         this.padding = 2;
 
         // Associate the bitmap to the ImageView.
-        Bitmap bitmap = Bitmap.createBitmap(vWidth, vHeight, Bitmap.Config.RGB_565);
+        Bitmap bitmap = Bitmap.createBitmap(sideLength, sideLength, Bitmap.Config.RGB_565);
         gameView.setImageBitmap(bitmap);
 
         // Create a Canvas with the bitmap.
