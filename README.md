@@ -2,7 +2,7 @@
 Ported snake game from java to android
 
 ## Description
-I had originally completed the University of Helsinki's MOOC course (Both [Part 1](http://moocfi.github.io/courses/2013/programming-part-1/) and [Part 2](http://moocfi.github.io/courses/2013/programming-part-2/)), and wanted to port their [Worm Game](https://materiaalit.github.io/2013-oo-programming/part2/week-12/) (Exercise 49) to Android to get a feel of the differences.
+I had originally completed the University of Helsinki's MOOC course (Both [Part 1](http://moocfi.github.io/courses/2013/programming-part-1/) and [Part 2](http://moocfi.github.io/courses/2013/programming-part-2/)), and wanted to port their [Worm Game](https://materiaalit.github.io/2013-oo-programming/part2/week-12/) (Exercise 49) to Android to get a feel of the differences. The Java code that I programmed for that exercise can be found in ["java-code"](https://github.com/nasjcodes/snake-mobile/tree/master/java-code).
 
 Prior to this, I had only did an extremely simple [QuoteBook App](https://github.com/nasjcodes/android-quotebook) with almost all instructions followed from the [Reddit post](https://www.reddit.com/r/Android/comments/2tpjep/the_new_step_by_step_guide_detailing_how_to_get/).
 
