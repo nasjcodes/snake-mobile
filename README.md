@@ -6,6 +6,9 @@ I had originally completed the University of Helsinki's MOOC course (Both [Part 
 
 Prior to this, I had only did an extremely simple [QuoteBook App](https://github.com/nasjcodes/android-quotebook) with almost all instructions followed from the [Reddit post](https://www.reddit.com/r/Android/comments/2tpjep/the_new_step_by_step_guide_detailing_how_to_get/).
 
+### Update 3 Nov 2018
+Given that learning programming is a virtually endless cycle, I have decided to focus on web development to build up my basic skills in all areas. I will still update this periodically.
+
 ## Challenges
 For record purposes, I have listed down (from memory) some challenges I faced when porting the application. In the future, I will try to record these down while programming to have a more complete list.
 
