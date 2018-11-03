@@ -33,7 +33,6 @@ public class SquareImageView extends android.support.v7.widget.AppCompatImageVie
         } else {
             sideLength = restrictedHeight;
         }
-
         setMeasuredDimension(sideLength, sideLength);
 
     }

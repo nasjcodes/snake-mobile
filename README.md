@@ -23,8 +23,15 @@ There were 2 main differences to porting the code in terms of functionality:
 #### Second commit (2 Nov 2018)
 * I create a new subclass of ImageView (SquareImageView) to programatically determine the side length of the game and generate a square view. This was done by overriding the onMeasure method, and subtracting the heights of the other views. I tried to keep good coding practice so that if additional views are added, the code should not change much.
 
+#### Third commit (3 Nov 2018)
+* Changed gameView type in GameBoard to SquareImageView as the method to set bitmap is meant to be square.
+* Change doFirstUpdate() to setBitmapSize()
+* I noticed that the bitmap size in the current iteration is not equal to the imageView size. I managed to update the bitmap size every step the snake moves until it eventually matches the imageView size. However, this does not look good on screen.
+* I also noticed that the 3 views (difficulty text, gameView, dPad) are not aligned perfectly. I think that this is because of the above issue - the bitmap size is supposed to iterate until it is the same as the imageView size, and then the layout can draw the views properly.
+
 ## TO-DO
 ### Issues
+* see "Third commit (3 Nov 2018)"
 * Pressing "Default" in the Settings Activity will overwrite and save the default settings even if "Save" is not pressed.
 * Pressing the back button on the game screen might cause some issues. This is because I did not define the other methods in the activity (e.g. onStop(), onDestroy() etc.).
 
@@ -33,3 +40,4 @@ There were 2 main differences to porting the code in terms of functionality:
 * The directional keys could be changed to arrow icons.
 * Animations can be more consistent throughout the application.
 * Adding a "Back" and "Reset" button on the game screen.
+* Randomize snake starting direction.

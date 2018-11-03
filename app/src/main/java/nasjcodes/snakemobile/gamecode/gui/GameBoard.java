@@ -4,7 +4,6 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.widget.ImageView;
 
 import nasjcodes.snakemobile.gamecode.domain.Piece;
 import nasjcodes.snakemobile.gamecode.game.SnakeGame;
@@ -12,7 +11,7 @@ import nasjcodes.snakemobile.gamecode.game.SnakeGame;
 //This class uses Canvas to draw the game board and updates the given gameView
 class GameBoard {
     private SnakeGame game;
-    private ImageView gameView;
+    private SquareImageView gameView;
     private Canvas board;
     private Paint paint;
     private boolean firstUpdate;
@@ -20,7 +19,7 @@ class GameBoard {
     private int padding;
 
 
-    GameBoard(SnakeGame game, ImageView gameView) {
+    GameBoard(SnakeGame game, SquareImageView gameView) {
         this.game = game;
         this.gameView = gameView;
         this.paint = new Paint();
@@ -30,7 +29,7 @@ class GameBoard {
 
     void update() {
         if(firstUpdate) {
-            doFirstUpdate();
+            setBitmapSize();
             firstUpdate = false;
         }
 
@@ -53,15 +52,15 @@ class GameBoard {
         gameView.invalidate();
     }
 
-    private void doFirstUpdate() {
+    private void setBitmapSize() {
         int sideLength;
 
         //Get smaller of the two (width/height) to generate a square play area
         //Equate the canvas size to the view size to prevent any scaling artifacts
-        if(gameView.getWidth() < gameView.getHeight()) {
-            sideLength = gameView.getWidth();
+        if(gameView.getMeasuredWidth() < gameView.getMeasuredHeight()) {
+            sideLength = gameView.getMeasuredWidth();
         } else {
-            sideLength = gameView.getHeight();
+            sideLength = gameView.getMeasuredHeight();
         }
 
         this.pieceLength = sideLength / 20;
